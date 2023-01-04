@@ -1,0 +1,34 @@
+hidden = [".config", ".wasproot", ".gitignore", "migrations", "run.sh"]
+
+entrypoint = "README.md"
+run = "chmod +x run.sh && ./run.sh"
+
+[nix]
+channel = "unstable"
+
+[env]
+XDG_CONFIG_HOME = "/home/runner/.config"
+PATH = "/home/runner/$REPL_SLUG/.config/bin:$PATH"
+REACT_APP_API_URL="https://$REPL_SLUG.$REPL_OWNER.repl.co:8099"
+WASP_WEB_CLIENT_URL="https://$REPL_SLUG.$REPL_OWNER.repl.co:9000"
+WASP_TELEMETRY_DISABLE="1"
+WASP_TELEMETRY_CONTEXT="replit"
+PRISMA_CLIENT_ENGINE_TYPE="binary"
+PRISMA_CLI_QUERY_ENGINE_TYPE="binary"
+
+[languages.wasp]
+pattern = "**/*..wasp"
+
+[languages.wasp.languageServer]
+start = "wasp waspls"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[[ports]]
+localPort = 3001
+externalPort = 8099
+
+[[ports]]
+localPort = 3000
+externalPort = 9000
