@@ -9,15 +9,20 @@ channel = "unstable"
 [env]
 XDG_CONFIG_HOME = "/home/runner/.config"
 PATH = "/home/runner/$REPL_SLUG/.config/bin:$PATH"
+# Wasp runs a React client & a NodeJS app
+# so we have to provide Wasp with the proper URLs
+# so client & server can communicate with each other
 REACT_APP_API_URL="https://$REPL_SLUG.$REPL_OWNER.repl.co:8099"
 WASP_WEB_CLIENT_URL="https://$REPL_SLUG.$REPL_OWNER.repl.co:9000"
 WASP_TELEMETRY_DISABLE="1"
+# Don't remove these values! They ensure that 
+# Prisma and Telemetry work correctly on Replit
 WASP_TELEMETRY_CONTEXT="replit"
 PRISMA_CLIENT_ENGINE_TYPE="binary"
 PRISMA_CLI_QUERY_ENGINE_TYPE="binary"
 
 [languages.wasp]
-pattern = "**/*..wasp"
+pattern = "**/*.wasp"
 
 [languages.wasp.languageServer]
 start = "wasp waspls"
