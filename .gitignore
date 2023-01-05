@@ -2,4 +2,4 @@
 /.env.server
 /.env.client
 /node_modules
-.DS_Store
+**/.DS_Store
