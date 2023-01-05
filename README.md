@@ -1,6 +1,6 @@
 🚨 IMPORTANT! You must visit your repl's url at port 9000 to correctly preview your app: </br>
 ✅
-https://wasp-replit-template.vincanger.repl.co:9000
+<APP_URL_WILL_GET_AUTOMATICALLY_INSERTED_HERE>
 
 ⚠️ Make sure to run `wasp db migrate-dev` in the Shell to begin. Look to the console for tips and warnings
 
