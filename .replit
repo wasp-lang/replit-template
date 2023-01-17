@@ -18,6 +18,9 @@ WASP_WEB_CLIENT_URL="https://$REPL_SLUG.$REPL_OWNER.repl.co:9000"
 # Prisma and Telemetry work correctly on Replit
 WASP_TELEMETRY_CONTEXT="replit"
 WASP_TELEMETRY_USER_ID="$REPL_OWNER"
+# OpenSSL versions used by Node.js and the REPL VM do not match
+# This causes Prisma's query engine to crash: https://www.prisma.io/docs/concepts/components/prisma-engines/query-engine 
+# Solution is to use Prisma's binary engine: https://github.com/prisma/prisma/issues/13478#issuecomment-1249208258
 PRISMA_CLIENT_ENGINE_TYPE="binary"
 PRISMA_CLI_QUERY_ENGINE_TYPE="binary"
 
