@@ -1,3 +1,12 @@
+> **_NOTE:_** 
+This is a copy of the Wasp Demo App template for Replit.com available at https://replit.com/@vincanger/wasp-template. We expect people to fork that template on Replit, not this repo here. Since our template already has Wasp installed, they don't need to do installation, instead they just get an already specific version of Wasp installed along with the Demo App (If a new version of Wasp is released, we will have to manually update that template on Replit). This repo contains all those files necessary to get that Demo App going on Replit, along with Replit and Nix config files. 
+
+> **Special Extra NOTE:** I used a custom version of the installer (present at `.config/installer.sh`) that allows choosing the location of where Wasp is installed, since we need to pick a specific location for Replit to work, so that installer should also be used in the future if installing new versions of Wasp.
+
+<br/>
+
+-----
+
 🚨 IMPORTANT! You must visit your repl's url at port 9000 to correctly preview your app: </br>
 ✅
 <APP_URL_WILL_GET_AUTOMATICALLY_INSERTED_HERE>
